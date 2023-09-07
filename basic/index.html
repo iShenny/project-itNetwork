@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsuranceApp</title>
+    <link rel="stylesheet" href="../basic/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="../basic/assets/img/logo.png" alt="Insurance Logo"> The Insurance App</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="../basic/index.html"><i class="fas fa-users"></i> Pojištěnci</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> O aplikaci</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <table id="InsuredPersonTable">
+            <thead>
+                <tr>
+                    <th>Jméno a Příjmení</th>
+                    <th>Věk</th>
+                    <th>Telefon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Řádky budou generovány skrze JavaScript. -->
+                <tr class="no-data-message">
+                    <td colspan="3">V tabulce se doposud nenachází žádná data.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="form-section">
+            <h2>Přidat nového pojištěnce</h2>
+            <span id="validationMessage"></span>
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Jméno">
+                <input type="text" id="surname" placeholder="Příjmení">
+                <input type="number" id="age" placeholder="Věk">
+                <input type="number" id="phoneNumber" placeholder="Telefonní číslo">
+            </div>
+            <button id="addButton">Přidat</button>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <p class="footer-info">
+                Tento web vytvořil Martin Šenk, student rekvalifikačního kurzu - Programátor WWW aplikací - JavaScript, jako svůj projekt ke zkoušce, a to ve formě BASIC.
+            </p>
+            <p class="footer-copyright">
+                &copy; 2023 Všechna práva vyhrazena.
+            </p>
+            <p class="footer-cc">
+                Tento obsah má v sobě elementy pod licencí <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons</a>.
+              </p>
+        </div>
+    </footer>
+    <script src="../basic/js/InsuredPerson.js"></script>
+    <script src="../basic/js/controller.js"></script>
+</body>
+</html>
