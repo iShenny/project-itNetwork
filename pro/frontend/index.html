@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsuranceApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap">
+</head>
+<body>
+
+    <!-- Načítání. -->
+    <div id="loadingIcon" class="loading-icon-container">
+        <i class="fas fa-spinner fa-spin"></i>
+      </div>      
+
+    <!-- Hlavička stránky. -->
+    <header>
+        <div class="header-content">
+            <h1><img src="assets/img/logo.png" alt="Insurance Logo"> The Insurance App</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html"><i class="fas fa-users"></i> Pojištěnci</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> O aplikaci</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hlavní obsah stránky s tabulkou pojištěných osob a formulářem pro přidání nové pojištěné osoby. -->
+    <main>
+        <table id="InsuredPersonTable">
+            <thead>
+                <tr>
+                    <th>Jméno a Příjmení</th>
+                    <th>Věk</th>
+                    <th>Telefon</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Řádky budou generovány skrze JavaScript. -->
+                <tr class="no-data-message">
+                    <td colspan="4">V tabulce se doposud nenachází žádná data.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Formulář pro vytvoření nové pojištěné osoby. -->
+        <div id="form-section" class="form-section">
+            <h2>Přidat nového pojištěnce</h2>
+            <span id="validationMessage"></span>
+
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Jméno" required>
+                <input type="text" id="surname" placeholder="Příjmení" required>
+                <input type="number" id="age" placeholder="Věk" required>
+                <input type="tel" id="phoneNumber" placeholder="Telefonní číslo" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="text" id="street" placeholder="Ulice a číslo popisné" required>
+                <input type="text" id="city" placeholder="Město" required>
+                <input type="text" id="postalCode" placeholder="PSČ" required>
+            </div>
+            
+            <button id="addButton" class="detail-button">Přidat</button>
+        </div>  
+    </main>
+
+    <!-- Patička stránky. -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p class="footer-info">
+                Tento web vytvořil Martin Šenk, student rekvalifikačního kurzu - Programátor WWW aplikací - JavaScript, jako svůj projekt ke zkoušce, a to ve formě PRO.
+            </p>
+            <p class="footer-copyright">
+                &copy; 2023 Všechna práva vyhrazena.
+            </p>
+            <p class="footer-cc">
+                Tento obsah má v sobě elementy pod licencí <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Načtení souborů JavaScript. -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
