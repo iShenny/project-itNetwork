@@ -1,0 +1,21 @@
+{
+	"name": "pro",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"dev": "nodemon server.js"
+	},
+	"keywords": [],
+	"author": "Bc. Martin Šenk",
+	"license": "UNLICENSED",
+	"private": true,
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"mongoose": "^7.5.1"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.1"
+	}
+}
